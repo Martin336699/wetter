@@ -22,7 +22,7 @@ function App() {
     if (location === '') {
       location = 'Trebbin';
     }
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&aqi=no&alerts=no`);
+    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&aqi=no&alerts=no`);
     const data = await response.json();
     console.log(data);
     setWeather(data);
