@@ -18,9 +18,9 @@ function App() {
     renderWeather();
   }, [weather]);
 
-  async function getWeather(location = 'Trebbin') {
+  async function getWeather(location = 'Havana') {
     if (location === '') {
-      location = 'Trebbin';
+      location = 'Havana';
     }
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&aqi=no&alerts=no`);
     const data = await response.json();
