@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../css/weather.css';
 
 function App() {
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const [weather, setWeather] = useState({
     location: { name: '' },
     current: { temp_c: '', condition: { icon: '' } },
@@ -21,7 +22,7 @@ function App() {
     if (location === '') {
       location = 'Trebbin';
     }
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=1ad2b9ceb4a9417082580031242609&q=${location}&days=7&aqi=no&alerts=no`);
+    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&aqi=no&alerts=no`);
     const data = await response.json();
     console.log(data);
     setWeather(data);
