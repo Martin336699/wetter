@@ -1,0 +1,14 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://my-api.com/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "my-react-app.vercel.app"
+        }
+      ]
+    }
+  ]
+}
