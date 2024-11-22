@@ -1,22 +1,38 @@
 body, html{
-  background-color: #f4f4f4;
+  background-image:url(../assets/coolHue-FFDB01-0E197D.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   margin: 0;
-  
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .container {
-  
-  height: 35vh;
-  width: 100%;
+  background-image:url(../assets/coolHue-92FFC0-002661.png);
+  background-size: cover;
+  background-repeat: no-repeat;  
+  height: 55vh;
+  width: 85vh;
+  border-radius: 3em;
+  padding-top: 5em;
+
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 h1 {
-  padding: 16px 70px;
-  margin-top: 20px;
+  padding: 3rem 5rem;
+  margin-top: 0.1em;
+  font-size: 10em;
 }
 
 .location {
-  padding-left: 70px;
+  padding-left: 6em;
 }
 
 .location label {
@@ -24,20 +40,22 @@ h1 {
 }
 
 .location input {
-  padding: 8px;
-  margin: 4px 0;
+  padding: 1em;
+  margin: 1em 0;
   border: none;
-  border-radius: 3px 0 0 9px;
+  border-radius: 0.3rem 0 0 0.9rem;
   outline: none;
+  font-size: 2.3rem;
 }
 
 .location button {
-  padding: 8px;
-  margin: 4px 0;
+  padding: 1em;
+  margin: 1em 0;
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 0 9px 3px 0;
+  border-radius: 0 0.9rem 0.3rem 0;
+  font-size: 2.3rem;
 }
 
 .forecast {
@@ -51,7 +69,8 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 10vh;
-  margin: 1px 60px;
+  margin: 2rem 3rem;
+  font-size: 2.5rem;
 }
 
 .currentInfo p {
@@ -64,6 +83,102 @@ h1 {
 }
 
 img {
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
+}
+
+
+
+/* Responsive styles */
+/* @media (max-width: 768px) {
+  .currentInfo {
+    width: 20vh;
+    margin: 1rem 1.5rem;
+    font-size: 2rem;
+  }
+
+  .currentInfo p {
+    width: 20vh;
+  }
+
+  img {
+    width: 70%;
+    height: 70%;
+  }
+} */
+
+@media (max-width: 480px) {
+
+  
+  .container {
+    
+    height: 95vh;
+    width: 45vh;
+    border-radius: 1.5rem;
+    padding-top: 2rem;
+  }
+  
+  h1 {
+    padding: 0;
+    margin-top: 0.1em;
+    font-size: 5em;
+    text-align: center;
+  }
+  
+  .location {
+    padding-left: 2em;
+  }
+  
+  .location label {
+    display: block;
+  }
+  
+  .location input {
+    padding: 0.5em;
+    margin: 1em 0;
+    border: none;
+    border-radius: 0.3rem 0 0 0.9rem;
+    outline: none;
+    font-size: 1.3rem;
+  }
+  
+  .location button {
+    padding: 0.5em;
+    margin: 1em 0;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 0.9rem 0.3rem 0;
+    font-size: 1.3rem;
+  }
+  
+  .forecast {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .currentInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10vh;
+    margin: 2rem 3rem;
+    font-size: 1.5rem;
+  }
+  
+  .currentInfo p {
+    text-align: center;
+    width: 10vh;
+    }
+  
+  .currentInfo .temp {
+    font-weight: bold;
+  }
+  
+  img {
+    width: 80%;
+    height: 80%;
+  }
+
 }
