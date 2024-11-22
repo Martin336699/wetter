@@ -3,12 +3,15 @@ import '../css/weather.css';
 
 function App() {
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+
   const [weather, setWeather] = useState({
     location: { name: '' },
     current: { temp_c: '', condition: { icon: '' } },
     forecast: { forecastday: Array(7).fill({ day: { condition: { icon: '' } } }) }
   });
+
   const [inputValue, setInputValue] = useState('');
+
 
   useEffect(() => {
     getWeather();
@@ -18,11 +21,12 @@ function App() {
     renderWeather();
   }, [weather]);
 
+  
   async function getWeather(location = 'Havana') {
     if (location === '') {
       location = 'Havana';
     }
-    const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&aqi=no&alerts=no`);
+    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7&aqi=no&alerts=no`);
     const data = await response.json();
     console.log(data);
     setWeather(data);
@@ -34,7 +38,7 @@ function App() {
     const today = new Date().toDateString();
     
   
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 3; i++) {
       const date = new Date(weather.forecast.forecastday[i].date);
       const dateString = date.toDateString();
 
