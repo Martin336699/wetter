@@ -16,23 +16,23 @@ body, html{
   background-image:url(../assets/coolHue-92FFC0-002661.png);
   background-size: cover;
   background-repeat: no-repeat;  
-  height: 55vh;
-  width: 85vh;
+  height: 75vh;
+  width: 90vw;
   border-radius: 3em;
-  padding-top: 5em;
+  /* padding-top: 5em; */
 
   overflow: hidden;
   box-sizing: border-box;
 }
 
 h1 {
-  padding: 3rem 5rem;
-  margin-top: 0.1em;
-  font-size: 10em;
+  padding: 0 3rem;
+  margin-top: .5em;
+  font-size: 5em;
 }
 
 .location {
-  padding-left: 6em;
+  padding: 0 3rem;
 }
 
 .location label {
@@ -40,22 +40,20 @@ h1 {
 }
 
 .location input {
-  padding: 1em;
-  margin: 1em 0;
+  padding: 1rem;
   border: none;
   border-radius: 0.3rem 0 0 0.9rem;
   outline: none;
-  font-size: 2.3rem;
+  font-size: 1.5rem;
 }
 
 .location button {
-  padding: 1em;
-  margin: 1em 0;
+  padding: 1rem;
   background-color: #4CAF50;
   color: white;
   border: none;
   border-radius: 0 0.9rem 0.3rem 0;
-  font-size: 2.3rem;
+  font-size: 1.5rem;
 }
 
 .forecast {
@@ -69,8 +67,8 @@ h1 {
   align-items: center;
   justify-content: center;
   width: 10vh;
-  margin: 2rem 3rem;
-  font-size: 2.5rem;
+  margin: 2rem 2rem;
+  font-size: 1.8rem;
 }
 
 .currentInfo p {
@@ -90,25 +88,20 @@ img {
 
 
 /* Responsive styles */
-/* @media (max-width: 768px) {
+
+@media (max-height: 930px) {
   .currentInfo {
-    width: 20vh;
-    margin: 1rem 1.5rem;
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
+}
 
-  .currentInfo p {
-    width: 20vh;
+
+@media (max-width: 540px) {
+  ::placeholder {
+    
+    font-size: 1.1rem; /* Change to your desired font size */
+    /* Add any other styles you want to apply */
   }
-
-  img {
-    width: 70%;
-    height: 70%;
-  }
-} */
-
-@media (max-width: 480px) {
-
   
   .container {
     
@@ -120,9 +113,9 @@ img {
   
   h1 {
     padding: 0;
-    margin-top: 0.1em;
-    font-size: 5em;
-    text-align: center;
+    margin: 0.2em 0.4em 0.3em 0.4em;
+    font-size: 4em;
+    /* text-align: center; */
   }
   
   .location {
@@ -139,7 +132,8 @@ img {
     border: none;
     border-radius: 0.3rem 0 0 0.9rem;
     outline: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    max-width: 50%;
   }
   
   .location button {
@@ -149,7 +143,7 @@ img {
     color: white;
     border: none;
     border-radius: 0 0.9rem 0.3rem 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .forecast {
@@ -163,8 +157,8 @@ img {
     align-items: center;
     justify-content: center;
     width: 10vh;
-    margin: 2rem 3rem;
-    font-size: 1.5rem;
+    margin: .9rem 1.3rem;
+    font-size: 1.3rem;
   }
   
   .currentInfo p {

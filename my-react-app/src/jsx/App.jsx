@@ -80,7 +80,7 @@ function App() {
           <input 
           type="text" 
           id='input' 
-          placeholder='Gib deinen Ortsnamen ein...' value={inputValue}
+          placeholder='Ortsname...' value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyUp={handleKeyUp} 
           />
